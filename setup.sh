@@ -9,7 +9,7 @@ brews=(
   dfc
   dnsmasq
   findutils
-  fontconfig --universal
+  fontconfig
   fpp
   fzf
   git
@@ -17,12 +17,9 @@ brews=(
   git-extras
   git-fresh
   git-lfs
-  gnuplot --with-qt
-  gnu-sed --with-default-names
   go
   htop
   iftop
-  imagemagick --with-webp
   lnav
   mackup
   macvim
@@ -43,13 +40,14 @@ brews=(
   tmux
   tree
   trash
-  vim --with-override-system-vi
-  wget --with-iri
+  vim
+  wget
 )
 
 casks=(
   adobe-reader
   cakebrew
+  charles
   cleanmymac
   docker
   dropbox
