@@ -43,6 +43,7 @@ apps=(
   iftop
   lnav
   mackup
+  mas
   mtr
   nmap
   node
@@ -54,6 +55,7 @@ apps=(
   tree
   vim
   wget
+  wifo-password
 )
 brew install --appdir="/Applications" ${apps[@]}
 
