@@ -24,8 +24,8 @@ brew install git
 
 echo "Git config"
 
-git config --global user.name "Brad Parbs"
-git config --global user.email brad@bradparbs.com
+git config --global user.name "Ben Hicks"
+git config --global user.email bhicks329@gmail.com
 
 
 echo "Installing brew git utilities..."
@@ -37,7 +37,6 @@ echo "Installing other brew stuff..."
 brew install tree
 brew install wget
 brew install trash
-brew install svn
 brew install mackup
 brew install node
 
@@ -50,11 +49,11 @@ brew cleanup
 echo "Installing homebrew cask"
 brew install caskroom/cask/brew-cask
 
-echo "Copying dotfiles from Github"
-cd ~
-git clone git@github.com:bradp/dotfiles.git .dotfiles
-cd .dotfiles
-sh symdotfiles
+#echo "Copying dotfiles from Github"
+#cd ~
+#git clone git@github.com:bradp/dotfiles.git .dotfiles
+#cd .dotfiles
+#sh symdotfiles
 
 echo "Grunting it up"
 npm install -g grunt-cli
@@ -64,12 +63,12 @@ echo "Installing Oh My ZSH..."
 curl -L http://install.ohmyz.sh | sh
 
 echo "Setting up Oh My Zsh theme..."
-cd  /Users/bradparbs/.oh-my-zsh/themes
-curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
+#cd  /Users/bradparbs/.oh-my-zsh/themes
+#curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
 
 echo "Setting up Zsh plugins..."
-cd ~/.oh-my-zsh/custom/plugins
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+#cd ~/.oh-my-zsh/custom/plugins
+#git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
@@ -81,20 +80,13 @@ apps=(
   bettertouchtool
   cleanmymac
   cloud
-  colloquy
-  cornerstone
   diffmerge
   dropbox
   filezilla
   firefox
   google-chrome
-  harvest
-  hipchat
   licecap
-  mou
-  phpstorm
   private-internet-access
-  razer-synapse
   sourcetree
   steam
   spotify
@@ -103,14 +95,11 @@ apps=(
   sublime-text2
   textexpander
   virtualbox
-  mailbox
   vlc
   skype
   transmission
   zoomus
-  onepassword
-  sequel-pro
-  chromecast
+  lastpass
   qlmarkdown
   qlstephen
   suspicious-package
@@ -146,9 +135,9 @@ defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 
 #"Disabling OS X Gate Keeper"
 #"(You'll be able to install any app you want from here on, not just Mac App Store apps)"
-sudo spctl --master-disable
-sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+#sudo spctl --master-disable
+#sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+#defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 #"Expanding the save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
