@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
-
 echo "Installing xcode-stuff"
 xcode-select --install
 
