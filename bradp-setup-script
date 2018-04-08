@@ -76,6 +76,9 @@ brew tap caskroom/cask
 echo "Grunting it up"
 npm install -g grunt-cli
 
+echo "Installing Lastpass from the app store"
+mas install 926036361
+
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
 curl -L http://install.ohmyz.sh | sh
