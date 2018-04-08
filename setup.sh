@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 brews=(
+  azure-cli
   aws-shell
   chainsawbaby/formula/bash-snippets
   cheat
