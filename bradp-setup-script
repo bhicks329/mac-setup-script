@@ -1,18 +1,22 @@
 #!/usr/bin/env bash
 
 echo "Installing xcode-stuff"
-xcode-select --install
+
 
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
+  prompt "Install Xcode"
+  xcode-select --install
+
+  prompt "Install Homebrew"
   echo "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  prompt "Update Homebrew"
+  brew update
+  brew upgrade
 fi
-
-# Update homebrew recipes
-echo "Updating homebrew..."
-brew update
 
 echo "Installing Git..."
 brew install git
@@ -62,14 +66,16 @@ echo "Setting up Oh My Zsh theme..."
 #curl https://gist.githubusercontent.com/bradp/a52fffd9cad1cd51edb7/raw/cb46de8e4c77beb7fad38c81dbddf531d9875c78/brad-muse.zsh-theme > brad-muse.zsh-theme
 
 echo "Setting up Zsh plugins..."
-#cd ~/.oh-my-zsh/custom/plugins
-#git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+cd ~/.oh-my-zsh/custom/plugins
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 
 # Apps
 apps=(
+  azure-cli
+  aws-shell
   alfred
   bartender
   bettertouchtool
@@ -79,12 +85,25 @@ apps=(
   dropbox
   filezilla
   firefox
+  fzf
+  fontconfig
+  go
   google-chrome
+  htop
+  iftop
   licecap
+  lnav
+  macvim
+  mtr
+  nmap
   private-internet-access
+  python
+  python3
   sourcetree
   steam
   spotify
+  thefuck
+  tmux
   vagrant
   iterm2
   sublime-text2
@@ -98,6 +117,41 @@ apps=(
   qlmarkdown
   qlstephen
   suspicious-package
+  vim
+  adobe-reader
+  cakebrew
+  charles
+  cleanmymac
+  docker
+  dropbox
+  firefox
+  google-chrome
+  github-desktop
+  hosts
+  handbrake
+  hyper
+  iina
+  istat-menus
+  istat-server  
+  launchrocket
+  licecap
+  quicklook-json
+  quicklook-csv
+  macdown
+  microsoft-office
+  muzzle
+  skype
+  slack
+  spotify
+  steam
+  teleport
+  transmission
+  transmission-remote-gui
+  tunnelbear
+  visual-studio-code
+  volumemixer
+  webstorm
+  xquartz
 )
 
 # Install apps to /Applications
