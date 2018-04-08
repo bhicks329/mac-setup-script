@@ -35,30 +35,51 @@ brew install git-extras
 brew install legit
 brew install git-flow
 
+# Install brew apps with specific flags
+brew install gnu-sed --with-default-names
+brew install wget --with-iri
+brew install gnupg
+brew install vim --with-override-system-vi
+brew install grep
+brew install openssh
+brew install screen
+brew tap bramstein/webfonttools
+brew install sfnt2woff
+brew install sfnt2woff-zopfli
+brew install woff2
+
 echo "Installing other brew stuff..."
 apps=(
   azure-cli
   aws-shell
+  coreutils
+  dnsmasq
+  findutils
   fzf
   fontconfig
   go
   htop
   iftop
   lnav
+  lynx
   mackup
   mas
+  moreutils
   mtr
   nmap
   node
+  p7zip
   python
   python3
+  tcptrace
+  tcpreplay
+  tcpflow
   thefuck
   tmux
   trash
   tree
-  vim
-  wget
   wifi-password
+  xpdf
 )
 brew install --appdir="/Applications" ${apps[@]}
 
