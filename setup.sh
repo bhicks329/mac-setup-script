@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 brews=(
-  android-platform-tools
-  archey
   aws-shell
   chainsawbaby/formula/bash-snippets
   cheat
   coreutils
   dfc
+  dnsmasq
   findutils
   fontconfig --universal
   fpp
@@ -20,32 +19,24 @@ brews=(
   gnuplot --with-qt
   gnu-sed --with-default-names
   go
-  haskell-stack
-  hh
   htop
-  httpie
   iftop
   imagemagick --with-webp
-  lighttpd
   lnav
   mackup
   macvim
   mas
-  micro
   moreutils
   mtr
   ncdu
   nmap
   node
   poppler
-  postgresql
   pgcli
   pv
   python
   python3
   osquery
-  scala
-  sbt
   stormssh
   thefuck
   tmux
@@ -57,16 +48,12 @@ brews=(
 
 casks=(
   adobe-reader
-  airdroid
   cakebrew
   cleanmymac
-  commander-one
   docker
   dropbox
   firefox
-  geekbench
   google-chrome
-  google-drive
   github-desktop
   hosts
   handbrake
@@ -76,25 +63,16 @@ casks=(
   istat-server  
   launchrocket
   licecap
-  jetbrains-toolbox
-  kap-beta
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlstephen
   quicklook-json
   quicklook-csv
   macdown
   microsoft-office
   muzzle
-  plex-home-theater
-  plex-media-server
   private-eye
   satellite-eyes
   sidekick
   skype
   slack
-  sling
   spotify
   steam
   teleport
@@ -126,7 +104,6 @@ npms=(
   nuclide-installer
 )
 
-gpg_key='3E219504'
 git_configs=(
   "branch.autoSetupRebase always"
   "color.ui auto"
@@ -139,18 +116,12 @@ git_configs=(
   "rebase.autostash true"
   "rerere.autoUpdate true"
   "rerere.enabled true"
-  "user.name pathikrit"
-  "user.email pathikritbhowmick@msn.com"
-  "user.signingkey ${gpg_key}"
+  "user.name bhicks329"
+  "user.email bhicks329@gmail.com"
 )
 
 vscode=(
-  donjayamanne.python
-  dragos.scala-lsp
   lukehoban.Go
-  ms-vscode.cpptools
-  rebornix.Ruby
-  redhat.java
 )
 
 fonts=(
@@ -225,14 +196,6 @@ install 'code --install-extension' ${vscode[@]}
 brew tap caskroom/fonts
 install 'brew cask install' ${fonts[@]}
 
-prompt "Upgrade bash"
-brew install bash
-sudo bash -c "echo $(brew --prefix)/bin/bash >> /private/etc/shells"
-mv ~/.bash_profile ~/.bash_profile_backup
-mv ~/.bashrc ~/.bashrc_backup
-mv ~/.gitconfig ~/.gitconfig_backup
-cd; curl -#L https://github.com/barryclark/bashstrap/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,screenshot.png}
-#source ~/.bash_profile
 
 prompt "Set git defaults"
 for config in "${git_configs[@]}"
