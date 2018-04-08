@@ -139,8 +139,6 @@ casks=(
 echo "installing apps with Cask..."
 brew cask install --appdir="/Applications" ${casks[@]}
 
-brew cask alfred link
-
 brew cask cleanup
 brew cleanup
 
