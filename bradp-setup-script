@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Setting the hostname"
-sudo scutil –-set HostName smackbook
+sudo scutil --set HostName smackbook
 
 echo "Installing xcode-stuff"
 
