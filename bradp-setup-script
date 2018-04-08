@@ -69,7 +69,7 @@ apps=(
   vim
   github-desktop
 )
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" ${apps[@]}
 
 #@TODO install our custom fonts and stuff
 
