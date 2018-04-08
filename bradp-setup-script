@@ -55,7 +55,7 @@ apps=(
   tree
   vim
   wget
-  wifo-password
+  wifi-password
 )
 brew install --appdir="/Applications" ${apps[@]}
 
