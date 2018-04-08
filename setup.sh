@@ -183,9 +183,10 @@ brew info ${brews[@]}
 install 'brew install' ${brews[@]}
 
 prompt "Install software"
-brew tap caskroom/versions
-brew cask info ${casks[@]}
-install 'brew cask install' ${casks[@]}
+#brew tap caskroom/versions
+#brew cask info ${casks[@]}
+#install 'brew cask install' ${casks[@]}
+brew cask install ${casks[@]}
 
 prompt "Installing secondary packages"
 install 'pip install --upgrade' ${pips[@]}
