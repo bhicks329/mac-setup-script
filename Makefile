@@ -6,7 +6,7 @@ HOSTNAME=smackbook
 
 # Install all brewfiles
 install_brewfiles:
-	brew update
+	brew update	
 	brew bundle --file=config/$(PROFILE)/Brewfile
 	brew cleanup
 
