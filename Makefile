@@ -22,7 +22,6 @@ config_git:
 
 setup_mac:
 	sudo scutil --set HostName $(HOSTNAME)
-	sh ./setup.sh
 	make install_brewfiles
 	make config_git
 	make config_mac
