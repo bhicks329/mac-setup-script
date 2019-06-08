@@ -31,8 +31,8 @@ make setup_mac
 #cd .dotfiles
 #sh symdotfiles
 
-echo "Grunting it up"
-npm install -g grunt-cli
+# echo "Grunting it up"
+# npm install -g grunt-cli
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
