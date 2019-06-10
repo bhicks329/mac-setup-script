@@ -5,23 +5,28 @@ HOSTNAME=smackbook
 
 
 # Install all brewfiles
-install_brewfiles:
+brew_install:
 	brew update	
 	brew bundle --file=config/$(PROFILE)/Brewfile
 	brew cleanup
 
-clean_brewfiles:
+brew_upgrade:
+	brew update	
+	brew upgrade
+	brew cleanup
+
+brew_clean:
 	brew bundle cleanup --force --file=config/$(PROFILE)/Brewfile
 
-config_mac:
+mac_config:
 	sh config/$(PROFILE)/config.sh
 
-config_git:
-	git config --global user.name $(NAME)
-	git config --global user.email $(EMAIL)
-
-setup_mac:
+mac_setup:
 	sudo scutil --set HostName $(HOSTNAME)
 	make install_brewfiles
 	make config_git
 	make config_mac
+
+git_config:
+	git config --global user.name $(NAME)
+	git config --global user.email $(EMAIL)
